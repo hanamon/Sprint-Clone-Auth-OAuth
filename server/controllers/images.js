@@ -6,5 +6,5 @@ module.exports = (req, res) => {
   if( !req.headers.authorization ) {
     return res.status(403).send({ message: 'no permission to access resources '});
   }
-  res.status(200).send({ images });
+  res.status(200).json({ images });
 }
